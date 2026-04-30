@@ -13,10 +13,10 @@ export default function Reviews() {
           <p className="body-lg mt-4 text-body">{t.reviews.subtitle}</p>
         </div>
 
-        {/* TODO: Replace with EmbedSocial / Elfsight Google Reviews widget for [GBP_URL] */}
+        {/* TODO: Replace static cards with EmbedSocial / Elfsight Google Reviews widget once GBP is live */}
         <div id="google-reviews-widget" className="mt-12 grid md:grid-cols-3 gap-6">
-          {[1, 2, 3].map((i) => (
-            <div key={i} className="bg-bg border border-border rounded-2xl p-6">
+          {t.reviews.items.map((r, i) => (
+            <article key={i} className="bg-bg border border-border rounded-2xl p-6 flex flex-col">
               <div className="flex gap-0.5 text-gold">
                 {Array.from({ length: 5 }).map((_, j) => (
                   <svg key={j} width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -24,18 +24,22 @@ export default function Reviews() {
                   </svg>
                 ))}
               </div>
-              <p className="mt-4 text-body leading-relaxed">[REVIEW_TEXT_{i}]</p>
+              <p className="mt-4 text-body leading-relaxed flex-1">{r.text}</p>
               <div className="mt-6 pt-4 border-t border-border">
-                <p className="font-semibold text-heading">[REVIEWER_NAME_{i}]</p>
-                <p className="text-sm text-body/60 mt-1">[REVIEW_DATE_{i}]</p>
+                <p className="font-semibold text-heading">{r.name}</p>
+                <p className="text-sm text-body/60 mt-1">
+                  {r.location} · {r.date}
+                </p>
               </div>
-            </div>
+            </article>
           ))}
         </div>
 
         <div className="mt-10 text-center">
           <a
             href={GBP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-gold font-semibold hover:underline underline-offset-4"
           >
             {t.reviews.seeAll}

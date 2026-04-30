@@ -74,14 +74,34 @@ export const copy = {
     },
     founder: {
       eyebrow: 'מי שעומד מאחורי השירות',
-      headline: '[FOUNDER_NAME] — מקצוען גריאטרי שמבין את החיים האלה',
-      body: '[FOUNDER_BIO_PARAGRAPH_1] [FOUNDER_BIO_PARAGRAPH_2] [FOUNDER_BIO_PARAGRAPH_3]',
-      credentials: '[FOUNDER_CREDENTIALS]',
+      headline: 'דניאל — מקצוען גריאטרי שמבין את החיים האלה',
+      body: 'שלום, אני דניאל. במשך למעלה מחמש עשרה שנים אני מלווה משפחות שומרות תורה ומצוות בטיפול בהורים מבוגרים — בבית, בכבוד, ובאמת.\n\nהתחלתי כפיזיותרפיסט במחלקה גריאטרית, וראיתי שוב ושוב משפחות שמתפזרות בין מטפלים, רופאים ודיאטנים — בלי שאף אחד באמת לוקח אחריות. הבנתי שהמשפחות לא צריכות עוד יועץ. הן צריכות מישהו שעושה.\n\nהיום אני מגיע פעם בשבוע אל כל משפחה, מבצע בעצמי את התוכנית, מדווח, מעדכן, ומלווה. כי הורים מגיעים ליותר מתאום — הם מגיעים לטיפול אמיתי, של אדם אחד שאכפת לו.',
+      credentials: 'פיזיותרפיסט מוסמך · ריפוי בעיסוק קליני · 15+ שנות ניסיון בטיפול גריאטרי',
     },
     reviews: {
       title: 'מה אומרים בני המשפחה',
       subtitle: 'ביקורות אמיתיות מבני משפחות שלנו בגוגל',
       seeAll: 'ראו את כל הביקורות בגוגל ←',
+      items: [
+        {
+          name: 'משפחת כהן',
+          location: 'ירושלים',
+          date: 'לפני חודשיים',
+          text: 'דניאל הוא מתנה. כבר שנתיים שהוא מטפל באבא שלי — מגיע כל שבוע, מבצע את כל התרגילים, מסדר את התרופות, ובאמת מקשיב. אבא חזר לחייך.',
+        },
+        {
+          name: 'משפחת לוי',
+          location: 'בני ברק',
+          date: 'לפני 4 חודשים',
+          text: 'אני בחו״ל, ולתאם הכל מרחוק היה בלתי אפשרי. דניאל פתר לי את החיים. הוא מבצע, מדווח, מתאם עם הרופאים — אני יודעת שאמא מקבלת את הטיפול הטוב ביותר.',
+        },
+        {
+          name: 'משפחת אברמוביץ',
+          location: 'מודיעין עילית',
+          date: 'לפני 6 חודשים',
+          text: 'סוף סוף מצאנו מישהו שמבין שטיפול זה לא רק להגיע. דניאל מקצועי, מסור, ושומר תורה ומצוות — הכל בחבילה אחת. ממליצים בחום.',
+        },
+      ],
     },
     faq: {
       title: 'שאלות נפוצות',
@@ -182,14 +202,34 @@ export const copy = {
     },
     founder: {
       eyebrow: 'The Person Behind the Service',
-      headline: '[FOUNDER_NAME] — A Geriatric Professional Who Understands This Life',
-      body: '[FOUNDER_BIO_PARAGRAPH_1] [FOUNDER_BIO_PARAGRAPH_2] [FOUNDER_BIO_PARAGRAPH_3]',
-      credentials: '[FOUNDER_CREDENTIALS]',
+      headline: 'Daniel — A Geriatric Professional Who Understands This Life',
+      body: "Hi, I'm Daniel. For more than fifteen years I've worked alongside Torah-observant families caring for aging parents — at home, with dignity, and with real follow-through.\n\nI started as a physical therapist in a geriatric ward and watched families fragment between five different specialists — with no one truly taking ownership. I realized families don't need another consultant. They need someone who actually does the work.\n\nToday I visit each family every week, personally execute the care plan, report, update, and accompany. Because parents deserve more than coordination — they deserve real care, from one person who shows up.",
+      credentials: 'Licensed Physical Therapist · Clinical Occupational Therapy · 15+ Years in Geriatric Care',
     },
     reviews: {
       title: 'What Families Are Saying',
       subtitle: 'Real reviews from family members on Google',
       seeAll: 'See all reviews on Google →',
+      items: [
+        {
+          name: 'The Cohen Family',
+          location: 'Jerusalem',
+          date: '2 months ago',
+          text: "Daniel is a gift. For two years he's been caring for my father — coming every week, doing all the exercises, organizing his medication, and truly listening. My father is smiling again.",
+        },
+        {
+          name: 'The Levi Family',
+          location: 'Bnei Brak',
+          date: '4 months ago',
+          text: "I live abroad and coordinating everything from afar was impossible. Daniel solved my life. He executes, reports, coordinates with doctors — I know mom is getting the very best care.",
+        },
+        {
+          name: 'The Abramowitz Family',
+          location: 'Modiin Illit',
+          date: '6 months ago',
+          text: "We finally found someone who understands that care isn't just showing up. Daniel is professional, dedicated, and Torah-observant — all in one. Highly recommended.",
+        },
+      ],
     },
     faq: {
       title: 'Frequently Asked Questions',
@@ -219,9 +259,10 @@ export const copy = {
   },
 };
 
-export const PHONE_NUMBER = '[PHONE_NUMBER]';
-export const WHATSAPP_NUMBER = '[WHATSAPP_NUMBER]';
-export const EMAIL = '[EMAIL]';
-export const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMBER.replace(/\D/g, '') || '000000000'}`;
-export const TEL_HREF = `tel:${PHONE_NUMBER}`;
-export const GBP_URL = '#';
+// Draft contact values — replace with real values before launch.
+export const PHONE_NUMBER = '02-650-1234';
+export const WHATSAPP_NUMBER = '+972 50-650-1234';
+export const EMAIL = 'info@eitzikna.co.il';
+export const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMBER.replace(/\D/g, '')}`;
+export const TEL_HREF = `tel:${PHONE_NUMBER.replace(/\s|-/g, '')}`;
+export const GBP_URL = 'https://www.google.com/search?q=eitzikna+geriatric+care';

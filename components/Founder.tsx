@@ -16,14 +16,18 @@ export default function Founder() {
                   <path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="currentColor" strokeWidth="2" />
                 </svg>
               </div>
-              <p className="text-sm text-body/60 italic">[FOUNDER_PORTRAIT]</p>
+              <p className="text-sm text-body/60 italic">תמונת פורטרט · Founder portrait</p>
             </div>
           </div>
         </div>
         <div className="md:col-span-3">
           <p className="eyebrow">{t.founder.eyebrow}</p>
           <h2 className="h2 mt-4">{t.founder.headline}</h2>
-          <p className="body-lg mt-6 text-body whitespace-pre-line">{t.founder.body}</p>
+          <div className="mt-6 space-y-4 text-body body-lg">
+            {t.founder.body.split('\n\n').map((para: string, i: number) => (
+              <p key={i}>{para}</p>
+            ))}
+          </div>
           <p className="mt-6 text-sm text-sage font-semibold tracking-wide">
             {t.founder.credentials}
           </p>
