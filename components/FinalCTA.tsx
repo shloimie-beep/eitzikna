@@ -3,13 +3,14 @@
 import Image from 'next/image';
 import { useLang } from '@/lib/LanguageContext';
 import { WHATSAPP_HREF } from '@/lib/copy';
+import { img } from '@/lib/img';
 
 export default function FinalCTA() {
   const { t } = useLang();
   return (
     <section id="contact" className="relative py-24 md:py-40 overflow-hidden">
       <Image
-        src="/images/elder-resting-on-bench-with-cane-garden.png"
+        src={img('/images/elder-resting-on-bench-with-cane-garden.png')}
         alt=""
         fill
         className="object-cover"

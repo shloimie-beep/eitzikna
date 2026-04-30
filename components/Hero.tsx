@@ -3,13 +3,14 @@
 import Image from 'next/image';
 import { useLang } from '@/lib/LanguageContext';
 import { TEL_HREF, PHONE_NUMBER } from '@/lib/copy';
+import { img } from '@/lib/img';
 
 export default function Hero() {
   const { t } = useLang();
   return (
     <section id="top" className="relative min-h-screen flex items-center overflow-hidden">
       <Image
-        src="/images/smiling-elder-rabbi-wheelchair-home-library.png"
+        src={img('/images/smiling-elder-rabbi-wheelchair-home-library.png')}
         alt=""
         fill
         priority

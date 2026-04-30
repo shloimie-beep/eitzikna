@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useLang } from '@/lib/LanguageContext';
+import { img } from '@/lib/img';
 
 export default function Approach() {
   const { t } = useLang();
@@ -11,7 +12,7 @@ export default function Approach() {
         <div className="order-2 md:order-none">
           <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-xl">
             <Image
-              src="/images/caregiver-warm-conversation-with-elder-and-son.png"
+              src={img('/images/caregiver-warm-conversation-with-elder-and-son.png')}
               alt=""
               fill
               className="object-cover"

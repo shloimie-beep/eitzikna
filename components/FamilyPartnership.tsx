@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useLang } from '@/lib/LanguageContext';
+import { img } from '@/lib/img';
 
 export default function FamilyPartnership() {
   const { t } = useLang();
@@ -15,13 +16,13 @@ export default function FamilyPartnership() {
 
         <div className="mt-16 space-y-20">
           <Row
-            image="/images/caregiver-warm-conversation-with-elder-and-son.png"
+            image={img('/images/caregiver-warm-conversation-with-elder-and-son.png')}
             title={t.family.row1.t}
             body={t.family.row1.b}
             imageStart
           />
           <Row
-            image="/images/family-reviewing-care-plan-father-in-background.png"
+            image={img('/images/family-reviewing-care-plan-father-in-background.png')}
             title={t.family.row2.t}
             body={t.family.row2.b}
             imageStart={false}

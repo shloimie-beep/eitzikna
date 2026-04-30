@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useLang } from '@/lib/LanguageContext';
+import { img } from '@/lib/img';
 
 const IMAGES = [
   'senior-resistance-band-leg-exercise-home.png',
@@ -33,7 +34,7 @@ export default function Services() {
             >
               <div className="relative aspect-square overflow-hidden">
                 <Image
-                  src={`/images/${IMAGES[i]}`}
+                  src={img(`/images/${IMAGES[i]}`)}
                   alt=""
                   fill
                   className="object-cover"
