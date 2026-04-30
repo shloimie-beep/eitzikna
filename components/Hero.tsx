@@ -9,9 +9,10 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-screen flex items-center bg-cover bg-center md:bg-fixed"
+      className="relative min-h-screen flex items-center bg-cover bg-center"
       style={{
         backgroundImage: `url(${img('/images/smiling-elder-rabbi-wheelchair-home-library.png')})`,
+        backgroundAttachment: 'fixed',
       }}
     >
       <div className="absolute inset-0 bg-heading/75" />

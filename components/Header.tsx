@@ -30,7 +30,13 @@ export default function Header() {
     >
       <div className="max-w-6xl mx-auto px-6 md:px-10 h-20 flex items-center justify-between gap-6">
         <a href="#top" className="flex items-center gap-2 shrink-0">
-          <span className="font-en-serif text-2xl font-semibold text-heading">Eitzikna</span>
+          <span
+            className={`font-en-serif text-2xl font-semibold transition-colors ${
+              scrolled ? 'text-heading' : 'text-white'
+            }`}
+          >
+            Eitzikna
+          </span>
         </a>
 
         <nav className="hidden md:flex items-center gap-8">

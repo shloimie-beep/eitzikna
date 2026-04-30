@@ -9,9 +9,10 @@ export default function FinalCTA() {
   return (
     <section
       id="contact"
-      className="relative py-24 md:py-40 bg-cover bg-center md:bg-fixed"
+      className="relative py-24 md:py-40 bg-cover bg-center"
       style={{
         backgroundImage: `url(${img('/images/elder-resting-on-bench-with-cane-garden.png')})`,
+        backgroundAttachment: 'fixed',
       }}
     >
       <div className="absolute inset-0 bg-heading/85" />
