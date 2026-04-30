@@ -25,16 +25,14 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all ${
-        scrolled ? 'bg-bg/95 backdrop-blur border-b border-border' : 'bg-transparent'
+        scrolled
+          ? 'bg-heading/90 backdrop-blur border-b border-white/10'
+          : 'bg-transparent'
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 md:px-10 h-20 flex items-center justify-between gap-6">
         <a href="#top" className="flex items-center gap-2 shrink-0">
-          <span
-            className={`font-en-serif text-2xl font-semibold transition-colors ${
-              scrolled ? 'text-heading' : 'text-white'
-            }`}
-          >
+          <span className="font-en-serif text-2xl font-semibold text-white">
             Eitzikna
           </span>
         </a>
@@ -44,9 +42,7 @@ export default function Header() {
             <a
               key={l.href}
               href={l.href}
-              className={`text-sm font-medium transition-colors ${
-                scrolled ? 'text-body hover:text-heading' : 'text-white/90 hover:text-white'
-              }`}
+              className="text-sm font-medium text-white/90 hover:text-white transition-colors"
             >
               {l.label}
             </a>
@@ -56,9 +52,7 @@ export default function Header() {
         <div className="flex items-center gap-3">
           <button
             onClick={() => setLang(lang === 'he' ? 'en' : 'he')}
-            className={`text-xs font-semibold tracking-wide transition-colors ${
-              scrolled ? 'text-body hover:text-heading' : 'text-white/90 hover:text-white'
-            }`}
+            className="text-xs font-semibold tracking-wide text-white/90 hover:text-white transition-colors"
             aria-label="Toggle language"
           >
             <span className={lang === 'en' ? 'font-bold' : 'opacity-60'}>EN</span>
@@ -72,7 +66,7 @@ export default function Header() {
             {t.nav.cta}
           </a>
           <button
-            className={`md:hidden ${scrolled ? 'text-heading' : 'text-white'}`}
+            className="md:hidden text-white"
             onClick={() => setOpen(!open)}
             aria-label="Menu"
           >
@@ -89,14 +83,14 @@ export default function Header() {
       </div>
 
       {open && (
-        <div className="md:hidden bg-bg border-t border-border">
+        <div className="md:hidden bg-heading/95 backdrop-blur border-t border-white/10">
           <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-4">
             {navLinks.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="text-body font-medium py-2"
+                className="text-white/90 font-medium py-2"
               >
                 {l.label}
               </a>
