@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { useLang } from '@/lib/LanguageContext';
 import { TEL_HREF, PHONE_NUMBER } from '@/lib/copy';
 import { img } from '@/lib/img';
@@ -8,26 +7,18 @@ import { img } from '@/lib/img';
 export default function Hero() {
   const { t } = useLang();
   return (
-    <section id="top" className="relative min-h-screen flex items-center overflow-hidden">
-      <Image
-        src={img('/images/smiling-elder-rabbi-wheelchair-home-library.png')}
-        alt=""
-        fill
-        priority
-        className="object-cover object-center"
-        sizes="100vw"
-      />
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            'linear-gradient(to right, rgba(26,40,64,0.75), rgba(26,40,64,0.45))',
-        }}
-      />
+    <section
+      id="top"
+      className="relative min-h-screen flex items-center bg-cover bg-center md:bg-fixed"
+      style={{
+        backgroundImage: `url(${img('/images/smiling-elder-rabbi-wheelchair-home-library.png')})`,
+      }}
+    >
+      <div className="absolute inset-0 bg-heading/75" />
       <div className="relative z-10 max-w-6xl mx-auto w-full px-6 md:px-10 py-32">
         <div className="max-w-2xl text-white start-align">
           <h1 className="h1 text-white">{t.hero.headline}</h1>
-          <p className="body-lg mt-6 text-white/90">{t.hero.sub}</p>
+          <p className="body-lg mt-6 text-white/95">{t.hero.sub}</p>
           <div className="mt-10 flex flex-wrap items-center gap-5">
             <a
               href="#contact"

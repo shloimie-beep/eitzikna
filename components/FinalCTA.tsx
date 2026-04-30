@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { useLang } from '@/lib/LanguageContext';
 import { WHATSAPP_HREF } from '@/lib/copy';
 import { img } from '@/lib/img';
@@ -8,18 +7,17 @@ import { img } from '@/lib/img';
 export default function FinalCTA() {
   const { t } = useLang();
   return (
-    <section id="contact" className="relative py-24 md:py-40 overflow-hidden">
-      <Image
-        src={img('/images/elder-resting-on-bench-with-cane-garden.png')}
-        alt=""
-        fill
-        className="object-cover"
-        sizes="100vw"
-      />
-      <div className="absolute inset-0 bg-heading/75" />
+    <section
+      id="contact"
+      className="relative py-24 md:py-40 bg-cover bg-center md:bg-fixed"
+      style={{
+        backgroundImage: `url(${img('/images/elder-resting-on-bench-with-cane-garden.png')})`,
+      }}
+    >
+      <div className="absolute inset-0 bg-heading/85" />
       <div className="relative z-10 max-w-3xl mx-auto px-6 md:px-10 text-center text-white">
         <h2 className="h2 text-white">{t.cta.headline}</h2>
-        <p className="body-lg mt-6 text-white/90">{t.cta.sub}</p>
+        <p className="body-lg mt-6 text-white/95">{t.cta.sub}</p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <a
             href={WHATSAPP_HREF}
