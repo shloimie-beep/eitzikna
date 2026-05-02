@@ -3,6 +3,8 @@ import Hero from '@/components/Hero';
 import Problem from '@/components/Problem';
 import Approach from '@/components/Approach';
 import Services from '@/components/Services';
+import Pillars from '@/components/Pillars';
+import Conditions from '@/components/Conditions';
 import HowItWorks from '@/components/HowItWorks';
 import WhyDifferent from '@/components/WhyDifferent';
 import FamilyPartnership from '@/components/FamilyPartnership';
@@ -22,6 +24,8 @@ export default function Home() {
         <Problem />
         <Approach />
         <Services />
+        <Pillars />
+        <Conditions />
         <HowItWorks />
         <WhyDifferent />
         <FamilyPartnership />
