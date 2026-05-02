@@ -12,13 +12,13 @@ export default function Conditions() {
           <p className="body-lg mt-4 text-body">{t.conditions.subtitle}</p>
         </div>
 
-        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 items-stretch">
           {t.conditions.items.map((c, i) => (
             <article
               key={i}
-              className="bg-surface border border-border rounded-2xl p-6 hover:border-sage transition-colors"
+              className="bg-surface border border-border rounded-2xl p-6 hover:border-sage transition-colors flex flex-col h-full"
             >
-              <div className="flex items-start gap-3">
+              <div className="flex items-start gap-3 flex-1">
                 <span className="text-gold shrink-0 mt-1">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                     <path

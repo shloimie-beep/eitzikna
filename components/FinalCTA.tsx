@@ -17,10 +17,6 @@ export default function FinalCTA() {
     >
       <div className="absolute inset-0 bg-heading/85" />
       <div className="relative z-10 max-w-3xl mx-auto px-6 md:px-10 text-center text-white">
-        <p className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-gold mb-5">
-          <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-          {t.cta.availability}
-        </p>
         <h2 className="h2 text-white">{t.cta.headline}</h2>
         <p className="body-lg mt-6 text-white/95">{t.cta.sub}</p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">

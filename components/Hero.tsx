@@ -18,10 +18,6 @@ export default function Hero() {
       <div className="absolute inset-0 bg-heading/75" />
       <div className="relative z-10 max-w-6xl mx-auto w-full px-6 md:px-10 py-32">
         <div className="max-w-2xl text-white start-align">
-          <p className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-gold mb-5">
-            <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-            {t.hero.eyebrow}
-          </p>
           <h1 className="h1 text-white">{t.hero.headline}</h1>
           <p className="body-lg mt-6 text-white/95">{t.hero.sub}</p>
           <div className="mt-10 flex flex-wrap items-center gap-5">
